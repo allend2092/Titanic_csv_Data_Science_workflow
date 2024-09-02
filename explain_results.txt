@@ -1,0 +1,78 @@
+Confusion Matrix
+
+
+[[85 20]
+ [31 43]]
+
+This matrix shows the performance of the classification model by comparing the actual values with the predicted values.
+
+True Negatives (TN): 85
+The model correctly predicted 85 passengers did not survive (class 0).
+
+False Positives (FP): 20
+The model incorrectly predicted 20 passengers survived (class 1) when they actually did not (class 0).
+
+False Negatives (FN): 31
+The model incorrectly predicted 31 passengers did not survive (class 0) when they actually did (class 1).
+
+True Positives (TP): 43
+The model correctly predicted 43 passengers survived (class 1).
+
+
+Classification Report
+The classification report provides detailed metrics for each class (0 = Not Survived, 1 = Survived) and includes precision, recall, F1-score, and support.
+
+Precision:
+
+Class 0 (Not Survived): 0.73
+Precision is the number of true positive predictions divided by the total number of positive predictions (both true positives and false positives). For class 0, the model’s precision is 0.73, meaning that when the model predicts a passenger did not survive, it is correct 73% of the time.
+Class 1 (Survived): 0.68
+For class 1, the precision is 0.68, meaning when the model predicts a passenger survived, it is correct 68% of the time.
+Recall:
+
+Class 0 (Not Survived): 0.81
+Recall (or Sensitivity) is the number of true positive predictions divided by the total number of actual positives (true positives and false negatives). For class 0, the recall is 0.81, indicating the model correctly identified 81% of the passengers who did not survive.
+Class 1 (Survived): 0.58
+For class 1, the recall is 0.58, meaning the model correctly identified 58% of the passengers who survived.
+F1-Score:
+
+Class 0 (Not Survived): 0.77
+The F1-score is the harmonic mean of precision and recall, providing a balance between the two. For class 0, the F1-score is 0.77, indicating a good balance between precision and recall for predicting passengers who did not survive.
+Class 1 (Survived): 0.63
+For class 1, the F1-score is 0.63, indicating a moderate balance between precision and recall for predicting passengers who survived.
+Support:
+
+Class 0 (Not Survived): 105
+The support is the number of actual occurrences of the class in the specified dataset. Here, 105 passengers did not survive.
+Class 1 (Survived): 74
+There were 74 passengers who survived.
+Overall Metrics:
+
+Accuracy: 0.72
+Accuracy is the ratio of correctly predicted instances (true positives and true negatives) to the total instances. The model has an overall accuracy of 72%, meaning it correctly predicts the survival status of passengers 72% of the time.
+Macro Average: 0.71 (Precision), 0.70 (Recall), 0.70 (F1-Score)
+The macro average calculates the mean of the precision, recall, and F1-score for all classes, treating all classes equally without considering class imbalance.
+Weighted Average: 0.71 (Precision), 0.72 (Recall), 0.71 (F1-Score)
+The weighted average takes into account the support (number of true instances) for each class to calculate the average, providing a more balanced view when there is class imbalance.
+Interpretation and Inference
+Class Imbalance: The dataset has a slight imbalance, with more passengers not surviving (105) compared to those who survived (74). This can affect model performance, especially for class 1 (Survived).
+
+Model Performance: The model performs better at predicting passengers who did not survive (class 0) than those who survived (class 1). This is indicated by higher precision, recall, and F1-score for class 0 compared to class 1.
+
+Improvement Areas:
+
+Class 1 Recall: The recall for class 1 is relatively low (0.58), meaning the model is missing a significant portion of passengers who actually survived. Improving recall for class 1 would make the model more sensitive to detecting survivors.
+Balanced Metrics: While the model has a decent overall accuracy (72%), the difference in precision and recall between classes suggests it could benefit from balancing. Techniques like adjusting class weights, oversampling the minority class, or undersampling the majority class might help improve performance for class 1.
+Model Use Case: Depending on the application, different metrics might be more critical. For example, if it is crucial not to miss any survivors (high recall for class 1), the current model would need adjustments. Conversely, if false positives (predicting survived when not) are more acceptable than false negatives (predicting not survived when survived), then the model might be more suitable as is.
+
+These results give you a good foundation for understanding the performance of your Random Forest model and highlight areas for potential improvement.
+
+
+
+
+
+
+
+
+
+
