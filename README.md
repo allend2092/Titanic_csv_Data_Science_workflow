@@ -1,6 +1,6 @@
 # Titanic Data Science Project
 
-This repository demonstrates a complete data science workflow using the Titanic dataset. It is designed as a practical example to showcase data science methods and processes, from data cleaning and feature engineering to data visualization and model building. This project serves as a demonstration of key concepts in data science, and can be presented as a portfolio piece to illustrate your proficiency with data analysis and machine learning.
+This repository demonstrates a complete data science workflow using the Titanic dataset. It is designed as a practical example to showcase data science methods and processes, from data cleaning and feature engineering to data visualization and model building. 
 
 ## Repository Contents
 
